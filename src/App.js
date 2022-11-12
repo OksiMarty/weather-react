@@ -6,6 +6,10 @@ function App() {
     <div className="App">
       <h1>Weather App</h1>
       <Form />
+      <p>
+        Coded by{" "}
+        <a href="https://github.com/OksiMarty/weather-react">Oksy Marty</a>{" "}
+      </p>
     </div>
   );
 }
