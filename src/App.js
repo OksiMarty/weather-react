@@ -6,9 +6,10 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather />
+        <footer>
         Coded by{" "}
         <a href="https://github.com/OksiMarty/weather-react">Oksy Marty</a>
-      </div>
+      </footer></div>
     </div>
   );
 }
