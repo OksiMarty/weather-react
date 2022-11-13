@@ -1,17 +1,14 @@
-import Form from "./Form";
 import "./App.css";
+import Weather from "./Weather";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
-      <Form />
-      <p>
+      <div className="container">
+        <Weather />
         Coded by{" "}
-        <a href="https://github.com/OksiMarty/weather-react">Oksy Marty</a>{" "}
-      </p>
+        <a href="https://github.com/OksiMarty/weather-react">Oksy Marty</a>
+      </div>
     </div>
   );
 }
-
-export default App;
