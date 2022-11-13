@@ -5,11 +5,12 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Sumy" />
         <footer>
-        Coded by{" "}
-        <a href="https://github.com/OksiMarty/weather-react">Oksy Marty</a>
-      </footer></div>
+          Coded by{" "}
+          <a href="https://github.com/OksiMarty/weather-react">Oksy Marty</a>
+        </footer>
+      </div>
     </div>
   );
 }
