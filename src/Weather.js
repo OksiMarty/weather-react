@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import RightDate from "./RightDate";
 import { ThreeDots } from "react-loader-spinner";
 import "./Weather.css";
 
@@ -15,6 +16,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       city: response.data.name,
       country: response.data.sys.country,
+      date: new Date(response.data.dt * 1000),
     });
   }
   if (weather.ready) {
@@ -51,7 +53,9 @@ export default function Weather(props) {
               <li className="mainCity">
                 {weather.city}, {weather.country}
               </li>
-              <li>Sunday 11:00</li>
+              <li>
+                <RightDate date={weather.date} />
+              </li>
               <li className="text-capitalize">{weather.description}</li>
             </ul>
           </div>
