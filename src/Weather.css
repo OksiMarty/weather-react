@@ -27,7 +27,7 @@
 }
 .unit {
   color: var(--accent-color);
-  position:relative;
+  position: relative;
   top: -20px;
 }
 
@@ -50,9 +50,4 @@ li {
   font-family: Berkshire Swash;
   padding-bottom: 15px;
   padding-top: 10px;
-}
-.mainImage {
-  position: relative;
-  top: -20px;
-  left: -20px;
 }
