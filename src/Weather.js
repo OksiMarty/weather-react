@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Info from "./Info";
+import Forecast from "./Forecast";
 import { ThreeDots } from "react-loader-spinner";
 import "./Weather.css";
-
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -19,6 +19,7 @@ export default function Weather(props) {
       city: response.data.name,
       country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
     });
   }
 
@@ -68,6 +69,7 @@ export default function Weather(props) {
           </div>
         </form>
         <Info data={weather} />
+        <Forecast data={weather} />
       </div>
     );
   } else {
