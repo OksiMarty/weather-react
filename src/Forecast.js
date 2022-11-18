@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ForecastDay from "./ForecastDay";
 import "./Forecast.css";
 import axios from "axios";
 
@@ -6,38 +7,24 @@ export default function Forecast(props) {
   const [ready, setReady] = useState(false);
   const [info, setInfo] = useState(null);
 
- 
-
   function handleResponse(response) {
     setInfo(response.data.daily);
     setReady(true);
   }
 
   if (ready) {
-    console.log(info);
-     let imageSource = `/img/${info[0].weather[0].icon}.png`;
     return (
       <div className="Forecast">
         <div className="row">
-          <div className="col">
-            <div className="ForecastDay">{info[0].dt}</div>
-            <div className="ForecastIcon">
-              <img
-                src={window.location.origin + imageSource}
-                alt={info[0].weather[0].main}
-                width={60}
-                height={60}
-              />
-            </div>
-            <div className="ForecastTemperature">
-              <span className="ForecastTemperatureMax">
-                {Math.round(info[0].temp.max)}°
-              </span>
-              <span className="ForecastTemperatureMin">
-                {Math.round(info[0].temp.min)}°
-              </span>
-            </div>
-          </div>
+          {info.map(function (dailyForecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <ForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
