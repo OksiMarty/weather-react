@@ -19,3 +19,16 @@
   background-color: white;
   color: var(--accent-color);
 }
+
+@media (max-width: 1080px) {
+  .city-input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .search-button {
+    margin-top: 20px;
+    width: 33%;
+    margin-left: 33%;
+    padding: 10px;
+  }
+}

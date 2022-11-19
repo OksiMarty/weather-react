@@ -12,7 +12,7 @@ export default function ForecastDay(props) {
   }
   return (
     <div className="ForecastDay">
-      <div className="ForecastDayofWeek">{dayofweek()}</div>
+      <div className="ForecastDayofWeek pt-3">{dayofweek()}</div>
       <div className="ForecastIcon">
         <img
           src={window.location.origin + imageSource}
