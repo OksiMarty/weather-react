@@ -8,7 +8,9 @@ export default function App() {
         <Weather defaultCity="Sumy" />
         <footer>
           Coded by{" "}
-          <a href="https://github.com/OksiMarty/weather-react">Oksy Marty</a>
+          <a href="https://github.com/OksiMarty/weather-react" target="true">
+            Oksy Marty
+          </a>
         </footer>
       </div>
     </div>
