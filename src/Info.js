@@ -1,5 +1,5 @@
 import React from "react";
-import TempUnits from "./TempUnits";
+import "./Info.css";
 import RightDate from "./RightDate";
 
 export default function Info(props) {
@@ -15,22 +15,26 @@ export default function Info(props) {
             <li>
               <RightDate date={props.data.date} />
             </li>
-            <li className="text-capitalize">{props.data.description}</li>
+            <li className="text-capitalize fw-bolder">
+              {props.data.description}
+            </li>
           </ul>
         </div>
-        <div className="col-1">
+        <div className="col-2">
           <img
             src={window.location.origin + imageSource}
             alt={props.data.description}
             className="mainImage"
-            width={60}
-            height={60}
+            height={75}
           />
         </div>
         <div className="col-2">
-          <TempUnits unitinfo={props.data.temperature} />
+          <div className="temperature ps-3">
+            {Math.round(props.data.temperature)}
+            <span className="unit">°C</span>
+          </div>
         </div>
-        <div className="col-3">
+        <div className="col-2">
           <ul className="weatherFeatures pt-2">
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {Math.round(props.data.wind)}km/h</li>

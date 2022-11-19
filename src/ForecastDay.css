@@ -1,0 +1,4 @@
+.ForecastDayofWeek,
+.ForecastTemperature {
+  color: var(--accent-color);
+}

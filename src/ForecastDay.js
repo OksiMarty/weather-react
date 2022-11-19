@@ -1,4 +1,5 @@
 import React from "react";
+import "./ForecastDay.css";
 
 export default function ForecastDay(props) {
   let imageSource = `/img/${props.data.weather[0].icon}.png`;
@@ -16,8 +17,7 @@ export default function ForecastDay(props) {
         <img
           src={window.location.origin + imageSource}
           alt={props.data.weather[0].main}
-          width={60}
-          height={60}
+          height={40}
         />
       </div>
       <div className="ForecastTemperature">

@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Sumy" />
+        <Weather defaultCity="Guadalajara" />
         <footer>
           Coded by{" "}
           <a href="https://github.com/OksiMarty/weather-react" target="true">

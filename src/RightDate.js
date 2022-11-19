@@ -22,7 +22,7 @@ export default function RightDate(props) {
   }
   return (
     <div>
-      {day} {hours}:{minutes}
+      Last update: {day} {hours}:{minutes}
     </div>
   );
 }
