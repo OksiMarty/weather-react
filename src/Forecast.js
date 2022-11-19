@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import ForecastDay from "./ForecastDay";
 import "./Forecast.css";
 import axios from "axios";
-import { cleanup } from "@testing-library/react";
 
 export default function Forecast(props) {
   const [ready, setReady] = useState(false);
@@ -22,7 +21,7 @@ export default function Forecast(props) {
       <div className="Forecast">
         <div className="row">
           {info.map(function (dailyForecast, index) {
-            if (index < 6) {
+            if (index < 5) {
               return (
                 <div className="col" key={index}>
                   <ForecastDay data={dailyForecast} />
